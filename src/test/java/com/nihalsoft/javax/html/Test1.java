@@ -16,8 +16,13 @@ public class Test1 {
         tag.attr("aa", "aa1");
         tag.css("background", "white").css("S", "ssdf");
         tag.append(t);
+        tag.addClass("a b c");
         div.append(tag);
 
+        A a = new A();
+        a.href("xyz herf");
+        tag.append(a);
+        
         Document doc = new Document();
         doc.body().append(div);
 

@@ -157,6 +157,10 @@ public abstract class BaseTag<E> implements ITag {
             sb.append(" style=\"" + _toCssString() + "\"");
         }
 
+        if (this.className.size() > 0) {
+            sb.append(" class=\"" + this._toClassString() + "\"");
+        }
+
         sb.append(">");
 
         sb.append(System.lineSeparator());
@@ -206,6 +210,15 @@ public abstract class BaseTag<E> implements ITag {
             }
         }
         return sb.toString().trim();
+    }
+
+    private String _toClassString() {
+        this.className.toArray();
+        StringBuilder sb = new StringBuilder();
+        for (String t : this.className) {
+            sb.append(t + " ");
+        }
+        return sb.toString();
     }
 
     public E addClass(String className) {
