@@ -6,21 +6,21 @@ public class Test1 {
         Div div = new Div();
         Div t = new Div();
 
-        t.setId("100").setName("Sheik").attr("id2", "aaa");
+        t.setId("txtLogin").setName("txtLogin").attr("data-id", "123");
 
         t.append(new Div());
 
         div.append(t);
 
-        Tag tag = new Tag("xyz");
-        tag.attr("aa", "aa1");
-        tag.css("background", "white").css("S", "ssdf");
+        Tag tag = new Tag("span");
+        tag.attr("name", "test");
+        tag.css("background", "white").css("border", "1px solid #ffff00");
         tag.append(t);
-        tag.addClass("a b c");
+        tag.addClass("login login-new");
         div.append(tag);
 
         A a = new A();
-        a.href("xyz herf");
+        a.href("http://google.com");
         tag.append(a);
         
         Document doc = new Document();
